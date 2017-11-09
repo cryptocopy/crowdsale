@@ -339,11 +339,11 @@ contract CryptoCopyCrowdsale {
 
     uint256 public totalTokenIssued; // Total of issued tokens
 
-    uint256 public bonusFirstTwoDaysPeriod = 200;//2 days;
-    uint256 public bonusFirstWeekPeriod = 900;//9 days;
-    uint256 public bonusSecondWeekPeriod = 1600;//16 days;
-    uint256 public bonusThirdWeekPeriod = 2300;//23 days;
-    uint256 public bonusFourthWeekPeriod = 3000;//30 days;
+    uint256 public bonusFirstTwoDaysPeriod = 2 days;
+    uint256 public bonusFirstWeekPeriod = 9 days;
+    uint256 public bonusSecondWeekPeriod = 16 days;
+    uint256 public bonusThirdWeekPeriod = 23 days;
+    uint256 public bonusFourthWeekPeriod = 30 days;
     
     uint256 public bonusFirstTwoDays = 20;
     uint256 public bonusFirstWeek = 15;
@@ -383,12 +383,7 @@ contract CryptoCopyCrowdsale {
 
     // CryptoCopy token
     Token public CryptoCopyToken;
-    
-    uint public lockPeriod;
 
-    function setLockPeriod(uint newLockPeriod) public onlyCreator {
-        lockPeriod = newLockPeriod;
-    }
     
     function setToken(address newToken) public onlyCreator {
         CryptoCopyToken = Token(newToken);
